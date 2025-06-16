@@ -1,0 +1,53 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="KalkulackaApp.MainWindow"
+        Title="KalkulackaApp">
+    <Grid Margin="10">
+    <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
+        <TextBox Name="Display" HorizontalAlignment="Stretch" IsReadOnly="True" Margin="0,0,0,10" Height="50"/>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Button Content="C" Click="Clear_Button" Grid.Row="0" Grid.Column="0" />
+            <Button Content="7" Click="Button_Click" Grid.Row="0" Grid.Column="1" />
+            <Button Content="8" Click="Button_Click" Grid.Row="0" Grid.Column="2" />
+            <Button Content="9" Click="Button_Click" Grid.Row="0" Grid.Column="3" />
+
+            <Button Content="4" Click="Button_Click" Grid.Row="1" Grid.Column="0"/>
+            <Button Content="5" Click="Button_Click" Grid.Row="1" Grid.Column="1" />
+            <Button Content="6" Click="Button_Click" Grid.Row="1" Grid.Column="2" />
+            <Button Content="*" Click="Button_Click" Grid.Row="1" Grid.Column="3" />
+
+            <Button Content="1" Click="Button_Click" Grid.Row="2" Grid.Column="0" />
+            <Button Content="2" Click="Button_Click" Grid.Row="2" Grid.Column="1" />
+            <Button Content="3" Click="Button_Click" Grid.Row="2" Grid.Column="2" />
+            <Button Content="-" Click="Button_Click" Grid.Row="2" Grid.Column="3" />
+
+            <Button Content="0" Click="Button_Click" Grid.Row="3" Grid.Column="0"/>
+            <Button Content="." Click="Button_Click" Grid.Row="3" Grid.Column="1" />
+            <Button Content="=" Click="Equal_Click" Grid.Row="3" Grid.Column="2" />
+            <Button Content="-" Click="Button_Click" Grid.Row="3" Grid.Column="3" Grid.RowSpan="2"/>
+
+            <Button Content="+" Click="Button_Click" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" />
+            <Button Content="/" Click="Button_Click" Grid.Row="4" Grid.Column="2" />
+        </Grid>
+    </Grid>
+</Window>
