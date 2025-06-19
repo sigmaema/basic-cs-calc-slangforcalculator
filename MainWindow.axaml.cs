@@ -13,7 +13,7 @@ public partial class MainWindow : Window
     }
     private void Button_Click(object? sender, RoutedEventArgs e)
     {
-        if (sender is Button button && Display != null)
+        if (sender is Button button && Display != null && button.Content != null)
         {
             Display.Text += button.Content.ToString();
         }
